@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab1 Buyel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=save" />
+</head>
+<body>
+  <div class="cipher-card">
+    <div class="cipher-title active" id="0">Алгоритм Виженера, прогрессивный ключ (русский язык)</div>
+    <div class="cipher-title" id="1">Шифр Плейфера (английский язык)</div>
+
+    <div class="form-row">
+      <div class="label">Ключ</div>
+      <input class="input-text" id="user_key" type="text" placeholder="Введите ключ" />
+      <input type="file" id="file_input" accept=".txt" hidden />
+      <button class="btn-read-from-file" type="button">Прочитать из файла</button>
+    </div>
+
+    <div class="field-label">Исходный текст:</div>
+    <input
+      class="full-input"
+      id="original_text"
+      type="text"
+      placeholder="Введите текст"
+    />
+
+    <div class="field-label">Результирующий текст:</div>
+    <input
+      class="full-input"
+      id="processed_text"
+      type="text"
+      placeholder="Здесь будет результат операций"
+      readonly
+    />
+
+    <div class="actions">
+      <button class="action-btn-encrypt" type="button">ШИФРОВАТЬ</button>
+      <button class="action-btn-decrypt" type="button">ДЕШИФРОВАТЬ</button>
+      <button class="action-btn-clear" type="button">ОЧИСТИТЬ</button>
+      <button class="material-symbols-outlined" type="button" id="btn_save" title="Сохранить в файл">save</button>
+    </div>
+
+    <div class="error-messages">
+      <div></div>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
